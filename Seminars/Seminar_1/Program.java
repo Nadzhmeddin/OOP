@@ -8,24 +8,26 @@ import java.util.List;
 public class Program {
     public static void main(String[] args) {
         
-        Product chokolate_1 = new Food("Twix", 70, 10, new GregorianCalendar(2023, 7, 10));
-        Product chokolate_2 = new Food("Mars", 75, 25, new GregorianCalendar(2023, 8, 12));
-        Product chokolate_3 = new Food("Sneakers", 80, 30, new GregorianCalendar(2023, 8, 9));
+        
+        Beverage beverage1 = new HotBeverage("Green tea", 20, 2, new GregorianCalendar(2023, 8, 20), 0.25, 60);
+        Product beverage2 = new HotBeverage("Black tea", 20, 10, new GregorianCalendar(2023, 8, 10), 0.25, 65);
+        HotBeverage beverage3 = new HotBeverage("Coffe", 40, 5, new GregorianCalendar(2023, 8, 15), 0.3, 60);
 
-        Vending list = new Vending();
-
+ 
         List<Product> list_prod = new ArrayList<>();
-        list_prod.add(chokolate_1);
-        list_prod.add(chokolate_2);
-        list_prod.add(chokolate_3);
 
-        list.initProducts(list_prod);
+        list_prod.add(beverage1);
+        list_prod.add(beverage2);
+        list_prod.add(beverage3);
 
-        String name = "Twix";
+        Vending hotBeverageVending = new HotBeverageVen();
+        hotBeverageVending.initProducts(list_prod);
 
-        System.out.println(list.getProduct(name).toString());
-    }
+        String name = "Green tea";
+        Double volume = 0.25;
+        Integer temperature = 60;
 
-
-    
+        System.out.println(((HotBeverageVen) hotBeverageVending).getProduct(name, volume, temperature).toString());
+        
+    }    
 }

@@ -7,11 +7,10 @@ import java.util.Calendar;
 
 public abstract class Product {
     
-    private String name;
-    private int price;
-    private int quantity;
-    private Calendar bestBefore;
-    // int [] storage;
+    protected String name;
+    protected int price;
+    protected int quantity;
+    protected Calendar bestBefore;
 
     public Product(String name, int price, int quantity, Calendar bestBefore) {
         this.name = name ;
@@ -54,7 +53,7 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return "Product [name=" + name + ", price=" + price + ", quantity=" + quantity + ", bestBefore=" + bestBefore.get(Calendar.YEAR) + "/" + bestBefore.get(Calendar.MONTH) + "]";
+        return "Product: [name=" + name + ", price=" + price + ", quantity=" + quantity + ", bestBefore=" + bestBefore.get(Calendar.YEAR) + "/" + bestBefore.get(Calendar.MONTH) + "]";
     }
     
 }

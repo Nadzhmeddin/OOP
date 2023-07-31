@@ -15,7 +15,6 @@ public class Vending {
         listProduct = myList;
     }
 
-
     public Product getProduct(String name) {
         for (Product product : listProduct) {
             if(product.getName().equals(name)) {
