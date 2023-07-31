@@ -3,7 +3,6 @@
 
 package Seminars.Seminar_1 ;
 
-import java.sql.Date;
 import java.util.Calendar;
 
 public abstract class Product {
