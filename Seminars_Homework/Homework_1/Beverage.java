@@ -1,4 +1,4 @@
-package Seminars.Seminar_1;
+package Seminars_Homework.Homework_1;
 
 import java.util.Calendar;
 
